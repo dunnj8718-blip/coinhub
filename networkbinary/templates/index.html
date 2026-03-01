@@ -1,0 +1,141 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Roles – HubCoin-Tech</title>
+  <link rel="stylesheet" href="{% static 'networkbinary/css/style.css' %}" />
+  <link rel="icon" type="image/png" href="{% static 'networkbinary/images/cloud.png' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <!-- <img src="{% static 'networkbinary/images/logo.png' %}" alt="Con Logo" class="logo" /> -->
+     <div > <b> HubCoin-Tech </b> </div>
+      <nav class="nav-links">
+        <a href="#">Products</a>
+        <a href="#">Ecosystem</a>
+        <a href="#">Company</a>
+        <a href="#">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Open Roles</h1>
+    <p>Help us build a decentralized future. Find your spot in our organization. Crypto Exchanges or Startups Trainings.</p>
+  </section>
+
+  <section class="ro">
+    <div class="container">
+      <div class="card">
+        <span class="category">Corporate &gt; open</span>
+        <h2 class="title">Bitcoin Trader instructor (Trainer)</h2>
+        <div class="location">
+          <strong>UNITED STATES - Remote, EMEA - Remote</strong><br/>
+          Full-time or partime  <br> <br>  <br> <button class="category"> Apply </button>
+        </div>
+      </div>
+  
+      <div class="card">
+        <span class="category">Corporate &gt; open </span>
+        <h2 class="title">  Crypto Signals Provider (with a focus on teaching)</h2>
+        <div class="location">
+          <strong> Japan - Remote, Branch </strong><br/>
+          Full-time or partime  <br> <br> <br>  <br> <button class="category"> Apply </button>
+        </div>
+      </div>
+  
+      <div class="card">
+        <span class="category">Corporate &gt; Open</span>
+        <h2 class="title">Community Leader / Discord Admin (Crypto Trading Groups)</h2>
+        <div class="location">
+          <strong>UNITED STATES - Remote, UNITED KINGDOM - Remote</strong><br/>
+          Full-time <br> <br>  <button class="category"> Apply </button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <span class="category">Corporate &gt; Open</span>
+        <h2 class="title">Crypto Course Creator (Freelance)</h2>
+        <div class="location">
+          <strong>UNITED STATES - Remote, EMEA - Remote</strong><br/>
+           Full-time Remote  <br> <br> <br> <button class="category"> Apply </button>
+        </div>
+      </div>
+  
+      <div class="card">
+        <span class="category">Corporate &gt; open</span>
+        <h2 class="title">Community Manager (with trading expertise)</h2>
+        <div class="location">
+          <strong>UNITED STATES - Remote, EMEA - Remote</strong><br/>
+          Full-time or Partime  <br> <br>  <button class="category"> Apply </button>
+        </div>
+      </div>
+  
+      <div class="card">
+        <span class="category">Corporate &gt; Closed </span>
+        <h2 class="title">Crypto Analyst instructor ( trainer )</h2>
+        <div class="location">
+          <strong>UNITED STATES - Remote, UNITED KINGDOM - Remote</strong><br/>
+          Full-time or Partime  <br> <br> <br>  <button class="category"> Apply </button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+  <!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="login-box">
+        <div class="h"> Signup </div>
+     <a href="{% url 'google' %}" style="text-decoration: none;">
+        <button class="login-btn g" >
+          <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+          Sign in with Google
+        </button>
+        </a>
+    
+         <a href="{% url 'yahoo' %}" style="text-decoration: none;">
+        <button class="login-btn y">
+          <img src="{% static 'networkbinary/images/yahoo.png' %}"  width="100%" alt="Yahoo" />
+          Sign in with Yahoo
+        </button>
+        </a>
+        
+        <a href="{% url 'outlook' %}" style="text-decoration: none;">
+        <button class="login-btn">
+          <img src="{% static 'networkbinary/images/logoout.jpeg' %}" alt="Outlook" />
+          Sign in with Outlook
+        </button>
+    </a>
+  
+      <a href="{% url 'yandex' %}" style="text-decoration: none;">
+        <button class="login-btn">
+          <img src="{% static 'networkbinary/images/yanlo.png' %}" alt="Yandex" />
+          Sign in with Yandex
+        </button>
+
+        </a>
+    
+        <div class="secure">
+          <img src="{% static 'networkbinary/images/cloud.png' %}" alt="Cloudflare" />
+          <span> Secured by Cloudflare</span>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+  <script src="{% static 'networkbinary/js/script.js' %}"></script>
+
+
+</body>
+</html>

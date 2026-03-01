@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error</title>
+  <link rel="stylesheet" href="{% static 'networkbinary/css/error.css' %}">
+  <style>
+    body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.error-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.error-content {
+  text-align: center;
+  background: white;
+  padding: 40px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 400px;
+}
+
+.error-content h1 {
+  margin: 0;
+  font-size: 72px;
+}
+
+.error-message {
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.error-message a {
+  color: #0066cc;
+  text-decoration: none;
+  border-bottom: 1px dashed #0066cc;
+}
+
+.error-message a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-content">
+      <h1>😞 Oops!</h1>
+      <p class="error-message">
+        Unacceptable login or Gmail missing / not completed.
+        <br>Please <a href="{% url 'home' %}">go back</a> and try again.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+

